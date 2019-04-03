@@ -1,0 +1,381 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Falconers Page</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="falconerstyle.css">
+    <link rel="shortcut icon" href="images/key.png" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <script src="scripts/imageSaver.js"></script>
+    <script src="scripts/html2canvas.js"></script>
+    <script src="scripts/canvas2image.js"></script>
+
+
+
+
+
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-star-system-component@1.0.0/index.js"></script>
+
+        <!-- let's add the animation and orbit controls components -->
+    <script src="https://unpkg.com/aframe-animation-component@^5.1.2/dist/aframe-animation-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-orbit-controls@1.2.0/dist/aframe-orbit-controls.min.js"></script>
+    <script src="http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js"></script>
+
+
+
+    <style>
+body, html {
+    height: 100%;
+    margin: 0;
+    background-color: #BF3EFF ;
+}
+
+
+
+
+</style>
+
+</head>
+
+<body id="allContent">
+
+
+
+<button class="collapsible">start typing</button>
+
+
+
+<div class="content">
+
+<p>Start typing right away. The text that will appear on this page will be with a cryptic script, and it will be very hard to read. If you would like to change the visuals of it you can use the controllers to do so.</p>
+
+</div>
+
+
+
+<button class="collapsible">controllers</button>
+
+
+<div class="controllers">
+
+  <p></p>
+
+ <button
+    class="buttonclass"
+    onclick="toggleCssForText('redCoolioText')">type in white</button>
+
+    <button
+    class="buttonclass"
+    onclick="toggleCssForText('blueCoolioText')">type in blue</button>
+
+    <button
+    class="buttonclass"
+    onclick="toggleCssForText('yellowCoolioText')">type in yellow</button>
+
+     <button
+    class="buttonclass"
+    onclick="decreaseFontSize()">type smaller</button>
+
+     <!-- <button
+    class="buttonclass"
+    onclick="increaseFontSize()">type medium</button> -->
+
+    <button
+    class="buttonclass"
+    onclick="increaseFontSize()">type larger</button>
+
+    <button
+    class="buttonclass"
+    onclick="toggleCssForText('helveticaCoolio')">type in helvetica</button>
+
+
+
+<!--
+    <button
+    class="buttonclass"
+    onclick="toggleCssForText('cooperCoolio')">type in cooper</button>
+-->
+    <br>
+     <br>
+
+
+
+</div>
+
+<button class="collapsible">decipher</button>
+
+
+<div class="textfield">
+  <br>
+  <p></p>
+
+
+
+
+<!--
+    <button
+    class="buttonclass"
+    onclick="toggleCssForText('cooperCoolio')">type in cooper</button>
+-->
+    <br>
+     <br>
+
+      <textarea
+ class="buttonclasssecond"
+
+ id="froala-editor"></textarea>
+
+   <br><br><br><br><br><br><br><br><br><br><br><br>  <br>  <br>    <br>  <br>  <br>  <br>  <br> <br>  <br> <br>  <br>  <br>  <br>  <br>  <br>  <br>
+
+
+
+</div>
+
+<!--
+<button onclick="saveImage()">Click me</button>
+
+<p id="capture"></p>
+
+-->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <div class="coolio"></div>
+
+
+     <div
+style = " font-family: Favorit; font-size: 20px; color: white; width: 250px; height: 30px; background-color: black ; padding: 5px; border: 8px solid black; position: absolute;"
+
+id = "mover1">
+
+This code language was written in 1685
+</div>
+
+   <div
+style = " font-family: Favorit; font-size: 20px; color: white; width: 370px; height: 30px; background-color: black; padding: 5px; border: 8px solid black; position: absolute;"
+
+id = "mover2">
+    This code language was written in 1685
+
+</div>
+
+
+   <div
+style = " font-family: Favorit; font-size: 20px; color: white; width: 230px; height: 30px; background-color: black; padding: 5px; border: 8px solid black; position: absolute;"
+
+id = "mover3">
+The angle has a meaning
+
+
+</div>
+
+
+   <div
+style = " font-family: Favorit; font-size: 20px; color: white; width: 290px; height: 30px; background-color: black; padding: 5px; border: 8px solid black; position: absolute;"
+
+id = "mover4">
+
+There is a story in the numbers
+</div>
+
+
+<!--
+<a class="question"
+
+    href="https://archive.org/details/cryptomenysispat00falc/page/78" target="_blank" onclick="window.open('https://archive.org/details/cryptomenysispat00falc/page/78', 'popup', 'height=800, width=600'); return false;"><img id = "question" src="q.png" ></a>
+-->
+
+<a><img id = "question" src="plus.png" class="question3" alt="Norway"></a>
+
+<a href="https://archive.org/details/cryptomenysispat00falc/page/78" target="_blank" onclick="window.open('https://archive.org/details/cryptomenysispat00falc/page/78', 'popup', 'height=800, width=600'); return false;"> <img id = "question" src="plus.png" class="question" ></a>
+
+<a><img id = "question" src="plus.png" class="question4" alt="Norway"></a>
+
+
+
+
+
+
+
+<div class="anglebox">
+
+
+ <p>A phonetic grouping means that all letter that has a similar sound when being pronounced are grouped in the alphabet. When giving each group a different direction, the direction of a sentence gan give an indication on how it sounds.
+   <br>
+     <br>
+   <img src="riktning2.png" width="95%"  alt="Norway" style="position; left: 40px;">
+</p>
+</div>
+
+
+
+     <div class="anglebox2">
+
+
+      <p>In 1685 John Falconer wrote the book <i>Art of Secret Information</i>. It was an attempt to share the knowledge on how to write (1) a coded script (2) so that secret information (3) could be communicated to certain people. Hiding a message makes it desirable (4), and since the messages were carried by horseback messengers (5) many people might have tried to read it along its journey (6). When the right person (7) had received the message a key (8) could be used to unlock the secret (9).
+
+        <br>
+          <br>
+     Use the numbers on your keypad to include these gifs when typing.
+        <br>
+          <br>
+        <img src="gif1.gif" width="18%"  alt="Norway" style="position; left: 40px;">
+        <img src="gif2.gif" width="6%"  alt="Norway" style="position; left: 40px;">
+        <img src="gif3.gif" width="8%"  alt="Norway" style="position; left: 40px;">
+        <img src="gif4.gif" width="8%"  alt="Norway" style="position; left: 40px;">
+        <img src="gif5.gif" width="8%"  alt="Norway" style="position; left: 40px;">
+        <img src="gif6.gif" width="8%"  alt="Norway" style="position; left: 40px;">
+        <img src="gif7.gif" width="18%"  alt="Norway" style="position; left: 40px;">
+        <img src="gif8.gif" width="8%"  alt="Norway" style="position; left: 40px;">
+        <img src="gif9.gif" width="8%"  alt="Norway" style="position; left: 40px;">
+
+
+</p>
+     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+    });
+}
+</script>
+
+
+<script>
+   $("#mover1").hide();
+    $("#mover2").hide();
+    $("#mover3").hide();
+    $("#mover4").hide();
+</script>
+
+<script>
+
+    $(".question2").on("mouseover", function () {
+        $("#mover1").show();
+    }).on("mouseleave", function () {
+        $("#mover1").hide();
+    });
+
+
+    $(document).on('mousemove', function(e){
+    $('#mover1').css({
+       left:  e.pageX +15,
+       top:   e.pageY -70
+    });
+      });
+
+        $(".question").on("mouseover", function () {
+        $("#mover2").show();
+    }).on("mouseleave", function () {
+        $("#mover2").hide();
+    });
+
+
+    $(document).on('mousemove', function(e){
+    $('#mover2').css({
+       left:  e.pageX -400,
+       top:   e.pageY -70
+    });
+      });
+
+
+        $(".question3").on("mouseover", function () {
+        $("#mover3").show();
+    }).on("mouseleave", function () {
+        $("#mover3").hide();
+    });
+
+
+    $(document).on('mousemove', function(e){
+    $('#mover3').css({
+       left:  e.pageX -260,
+       top:   e.pageY -70
+    });
+      });
+
+
+        $(".question4").on("mouseover", function () {
+        $("#mover4").show();
+    }).on("mouseleave", function () {
+        $("#mover4").hide();
+    });
+
+
+    $(document).on('mousemove', function(e){
+    $('#mover4').css({
+       left:  e.pageX -320,
+       top:   e.pageY -70
+    });
+      });
+
+
+      $('.question4').click(function() {
+         $('.anglebox2').show();
+      });
+      $('.question3').click(function() {
+         $('.anglebox').show();
+      });
+
+
+</script>
+
+
+</body>

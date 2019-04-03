@@ -159,7 +159,7 @@ padding-left: 20px;
   transition: max-height 0s ease-out;
   background-color: white;
    position: absolute;
-    left: 60%   ;
+    left: 33%   ;
    top: 60px;
   font-size: 20px;
   font-weight: ;
@@ -350,8 +350,8 @@ background-color: black;
   font-weight: ;
  font-family: "Favorit";
  padding-left: 20px;
- display: none
-
+ display: none;
+z-index: 100;
   }
 
   .anglebox2 {
@@ -367,6 +367,7 @@ background-color: black;
  font-family: "Favorit";
  padding-left: 20px;
  display: none;
+ z-index: 100;
 
 
   }
